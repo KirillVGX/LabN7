@@ -51,11 +51,11 @@ public:
                     students[j] = students[j + 1];
                 }
                 count--;
-                cout << "Ñòóäåíòà " << name << " âèäàëåíî." << endl;
+                cout << "Ð¡Ñ‚ÑƒÐ´ÐµÐ½Ñ‚Ð° " << name << " Ð²Ð¸Ð´Ð°Ð»ÐµÐ½Ð¾." << endl;
                 return;
             }
         }
-        cout << "Ñòóäåíòà ç ³ì'ÿì " << name << " íå çíàéäåíî." << endl;
+        cout << "Ð¡Ñ‚ÑƒÐ´ÐµÐ½Ñ‚Ð° Ð· Ñ–Ð¼'ÑÐ¼ " << name << " Ð½Ðµ Ð·Ð½Ð°Ð¹Ð´ÐµÐ½Ð¾." << endl;
     }
 
     double calculateAverageGrade() const {
@@ -69,10 +69,10 @@ public:
 
     void showStudents() {
         if (count == 0) {
-            cout << "Ñïèñîê ñòóäåíò³â ïîðîæí³é." << endl;
+            cout << "Ð¡Ð¿Ð¸ÑÐ¾Ðº ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ñ–Ð² Ð¿Ð¾Ñ€Ð¾Ð¶Ð½Ñ–Ð¹." << endl;
             return;
         }
-        cout << "Ñïèñîê ñòóäåíò³â:" << endl;
+        cout << "Ð¡Ð¿Ð¸ÑÐ¾Ðº ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ñ–Ð²:" << endl;
         for (int i = 0; i < count; i++) {
             cout << students[i].name << ": " << students[i].grade << endl;
         }
@@ -87,32 +87,32 @@ int main() {
     double grade;
 
     while (true) {
-        cout << "Ìåíþ:" << endl;
-        cout << "1. Äîäàòè ñòóäåíòà" << endl;
-        cout << "2. Âèäàëèòè ñòóäåíòà" << endl;
-        cout << "3. Âèâåñòè ñåðåäí³é áàë" << endl;
-        cout << "4. Âèâåñòè ñïèñîê ñòóäåíò³â" << endl;
-        cout << "5. Âèõ³ä" << endl;
-        cout << "Ââåä³òü âàø âèá³ð: ";
+        cout << "ÐœÐµÐ½ÑŽ:" << endl;
+        cout << "1. Ð”Ð¾Ð´Ð°Ñ‚Ð¸ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°" << endl;
+        cout << "2. Ð’Ð¸Ð´Ð°Ð»Ð¸Ñ‚Ð¸ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°" << endl;
+        cout << "3. Ð’Ð¸Ð²ÐµÑÑ‚Ð¸ ÑÐµÑ€ÐµÐ´Ð½Ñ–Ð¹ Ð±Ð°Ð»" << endl;
+        cout << "4. Ð’Ð¸Ð²ÐµÑÑ‚Ð¸ ÑÐ¿Ð¸ÑÐ¾Ðº ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ñ–Ð²" << endl;
+        cout << "5. Ð’Ð¸Ñ…Ñ–Ð´" << endl;
+        cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ð²Ð°Ñˆ Ð²Ð¸Ð±Ñ–Ñ€: ";
         cin >> choice;
 
         switch (choice) {
         case 1:
-            cout << "Ââåä³òü ³ì'ÿ ñòóäåíòà: ";
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ñ–Ð¼'Ñ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: ";
             cin >> name;
-            cout << "Ââåä³òü îö³íêó ñòóäåíòà: ";
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ð¾Ñ†Ñ–Ð½ÐºÑƒ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: ";
             cin >> grade;
             studentList.addStudent(name, grade);
             break;
 
         case 2:
-            cout << "Ââåä³òü ³ì'ÿ ñòóäåíòà, ÿêîãî ïîòð³áíî âèäàëèòè: ";
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ñ–Ð¼'Ñ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°, ÑÐºÐ¾Ð³Ð¾ Ð¿Ð¾Ñ‚Ñ€Ñ–Ð±Ð½Ð¾ Ð²Ð¸Ð´Ð°Ð»Ð¸Ñ‚Ð¸: ";
             cin >> name;
             studentList.removeStudent(name);
             break;
 
         case 3:
-            cout << "Ñåðåäí³é áàë: " << studentList.calculateAverageGrade() << endl;
+            cout << "Ð¡ÐµÑ€ÐµÐ´Ð½Ñ–Ð¹ Ð±Ð°Ð»: " << studentList.calculateAverageGrade() << endl;
             break;
 
         case 4:
@@ -120,11 +120,11 @@ int main() {
             break;
 
         case 5:
-            cout << "Çàâåðøåííÿ ïðîãðàìè." << endl;
+            cout << "Ð—Ð°Ð²ÐµÑ€ÑˆÐµÐ½Ð½Ñ Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¸." << endl;
             return 0;
 
         default:
-            cout << "Íåêîðåêòíå çíà÷åííÿ âàðiàíòà!" << endl;
+            cout << "ÐÐµÐºÐ¾Ñ€ÐµÐºÑ‚Ð½Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð½Ñ Ð²Ð°Ñ€iÐ°Ð½Ñ‚Ð°!" << endl;
         }
     }
     return 0;
